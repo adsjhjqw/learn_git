@@ -1,0 +1,29 @@
+git add file :将file文件加入缓存区
+
+git commit -m "information":将所有缓存区的文件一次性提交到master的分支中
+
+git status:查看仓库当前的状态（缓存区）
+
+git log：查看git提交的日志信息
+
+git reflog:查看提交修改版本信息
+
+git reset --hard HEAD^:回退到上一个版本
+
+git reset --hard commitID:根据提交ID号来进行回退
+
+git reset HEAD file:将在缓存区中的file文件进行撤销
+
+git checkout -- file:将file文件在工作区的修改全部撤销
+
+git rm file  git commit -m "information":将file文件从工作区删除并向版本库提交，可以使用checkout命令来还原
+
+git remote add origin git@github.com:ctyharden/learn_git.git:将本地的仓库和远程仓库关联起来，远程库的名字就设为origin
+
+由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+
+git分支:
+
+创建的新分支首先会指向master相同的提交，在把HEAD指向dev，表示当前的分支为dev，工作区的文件都没有任何变化。
+
+
